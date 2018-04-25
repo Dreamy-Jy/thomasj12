@@ -45,4 +45,4 @@ void DFS_PreOrder_traversal_iterative_recursive(const Node *entry) {
   DFS_PreOrder_traversal_iterative_recursive(entry->left);
   
   DFS_PreOrder_traversal_iterative_recursive(entry->right);
-  
+}
