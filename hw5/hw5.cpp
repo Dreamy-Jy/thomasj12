@@ -18,8 +18,14 @@ struct Node {
 	}
 };
 
-bool DFS_PreOrder_find_recursive(const int& find, const Node *entry);
-void DFS_PreOrder_traversal_iterative_recursive(const Node *entry);
+void DFS_PreOrder_traversal_iterative_recursive(const Node *entry) {
+  if (entry == nullptr) return;
+  
+  cout << entry->value << " ";
+  
+  DFS_PreOrder_traversal_recursive(entry->left);
+  DFS_PreOrder_traversal_recursive(entry->right);
+}
 
 Node *generateBinaryTree() {
 	Node *root = new Node(2);
@@ -32,17 +38,7 @@ Node *generateBinaryTree() {
 
 int main() {
   Node *root = generateBinaryTree();
-  cout << " these are the steps in my tree: ";
+  cout << "These are the steps in my tree: ";
   DFS_PreOrder_traversal_iterative_recursive(root);
   cout << endl;
-}
-
-void DFS_PreOrder_traversal_iterative_recursive(const Node *entry) {
-  if (entry == nullptr) return;
-  
-  cout << entry->value << " ";
-  
-  DFS_PreOrder_traversal_iterative_recursive(entry->left);
-  
-  DFS_PreOrder_traversal_iterative_recursive(entry->right);
 }
