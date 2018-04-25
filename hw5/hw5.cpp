@@ -39,6 +39,6 @@ Node *generateBinaryTree() {
 int main() {
   Node *root = generateBinaryTree();
   cout << "These are the steps in my tree: ";
-  DFS_PreOrder_traversal_iterative_recursive(root);
+  DFS_PreOrder_traversal_recursive(root);
   cout << endl;
 }
