@@ -18,7 +18,7 @@ struct Node {
 	}
 };
 
-void DFS_PreOrder_traversal_iterative_recursive(const Node *entry) {
+void DFS_PreOrder_traversal_recursive(const Node *entry) {
   if (entry == nullptr) return;
   
   cout << entry->value << " ";
